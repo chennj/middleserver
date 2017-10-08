@@ -1,0 +1,3 @@
+*.java linguist-language=c++
+*.class linguist-language=c++
+*.jar linguist-language=c++
