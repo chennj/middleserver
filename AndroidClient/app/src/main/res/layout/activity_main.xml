@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.androidexample.chenn.androidclient.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="15dp"
+                android:textStyle="bold|italic"
+                android:text="连接参数设置"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="组ID："/>
+
+                <EditText
+                    android:id="@+id/ed_gongsiid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="100dp"
+                    android:text="123456"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_marginStart="10dp"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="用户NO："/>
+
+                <EditText
+                    android:id="@+id/ed_weixinhao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="100dp"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold|italic"
+                android:text="选择聊天对象"/>
+
+            <ListView
+                android:id="@+id/lv_member"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </ListView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:layout_marginStart="10dp"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="服务器："/>
+
+        <EditText
+            android:id="@+id/ed_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="170dp"
+            android:text="192.168.0.122"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="端口："/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9999"
+            android:minWidth="70dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:layout_marginStart="10dp"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bt_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="0dp"
+            android:padding="5dp"
+            android:text="连接服务器"/>
+
+        <Button
+            android:id="@+id/bt_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="0dp"
+            android:padding="5dp"
+            android:layout_marginLeft="10dp"
+            android:text="重置连接"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="345dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:gravity="start">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="聊天对象"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:id="@+id/tx_member"
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:gravity="center_horizontal"
+            android:minWidth="200dp"
+            android:text=""
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:id="@+id/tx_clear"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:gravity="center_horizontal"
+            android:text="清除"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="345dp"
+        android:layout_height="220dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:background="#ddccee"
+        android:gravity="start">
+
+        <TextView
+            android:id="@+id/tx_content"
+            android:background="#aabbcc"
+            android:padding="3dp"
+            android:text="通讯双方的用户NO不能相同\n组ID暂时不起作用"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:drawable/btn_default"
+            android:textSize="11dp"/>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="345dp"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:background="#aabbcc">
+
+        <EditText
+            android:id="@+id/ed_snd"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ed_bg"
+            android:text=""/>
+
+        <Button
+            android:id="@+id/bt_snd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:minHeight="0dp"
+            android:text="发送"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="345dp"
+        android:layout_height="110dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#aabbcc"
+        android:gravity="start">
+
+        <TextView
+            android:id="@+id/tx_err"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textStyle="bold"
+            android:text="用来显示错误提示信息"
+            android:textColor="@color/colorAccent"/>
+
+    </ScrollView>
+
+</LinearLayout>
